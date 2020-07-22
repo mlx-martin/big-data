@@ -1,0 +1,20 @@
+hdfs:
+  changjingyun-directory: /
+  ha:
+    user: root
+    default-fs: hdfs://hahdfs
+    nameservices: hahdfs
+    namenodes: nn1,nn2
+    rpc-address1: node1:9000
+    rpc-address2: node2:9000
+    client-failover-proxy-provider: org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider
+    client-use-datanode-hostname: true
+
+hbase:
+  zookeeper-quorum: node1:2181,node2:2181,node3:2181
+  phoenix:
+    url: jdbc:phoenix:node1,node2,node3:2181
+    driver-class: org.apache.phoenix.jdbc.PhoenixDriver
+    schema-is-namespace-mapping-enabled: true
+
+
