@@ -1,10 +1,14 @@
 package com.martin.bigdata.util;
 
+import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
 import org.apache.hadoop.io.IOUtils;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.URI;
 
 /**
  * @author martin
@@ -68,5 +72,65 @@ public class HdfsUtil {
         IOUtils.copyBytes(inputStream, outputStream,4096,true);
     }
 
+
+    /**
+     * 第一种方法
+     *
+     * @param fileSystem
+     * @param inputPath
+     * @param outputPath
+     * @throws Exception
+     */
+    public static void getFile1(FileSystem fileSystem, String inputPath, String outputPath) throws Exception {
+        // 获取 hdfs 文件的输入流
+        FSDataInputStream fsDataInputStream = fileSystem.open(new Path(inputPath));
+        // 获取本地文件的输出流
+        FileOutputStream fileOutputStream = new FileOutputStream(new File(outputPath));
+        // 将输入流的数据复制到输出流
+        org.apache.commons.io.IOUtils.copy(fsDataInputStream, fileOutputStream);
+        // 关闭流
+        org.apache.commons.io.IOUtils.closeQuietly(fsDataInputStream);
+        org.apache.commons.io.IOUtils.closeQuietly(fileOutputStream);
+    }
+
+    /**
+     * 第二种方法
+     *
+     * @param fileSystem
+     * @param inputPath
+     * @param outputPath
+     * @throws Exception
+     */
+    public static void getFile2(FileSystem fileSystem, String inputPath, String outputPath) throws Exception {
+        // 获取 hdfs 文件的输入流
+        fileSystem.copyToLocalFile(false, new Path(inputPath), new Path(outputPath), true);
+
+    }
+
+
+    public static void putFile(FileSystem fileSystem, String inputPath, String outputPath) throws Exception {
+        // 获取 hdfs 文件的输入流
+        fileSystem.copyFromLocalFile(new Path(inputPath), new Path(outputPath));
+
+    }
+
+    public void mergeFile() throws Exception {
+        //1 获取分布式文件系统
+        FileSystem fileSystem = FileSystem.get(new URI("hdfs://101.200.169.243:9000"), new Configuration(), "root");
+        //2 创建大文件输出流
+        FSDataOutputStream fsDataOutputStream = fileSystem.create(new Path("/bigfile.xml"));
+        //3 获取本地文件系统
+        LocalFileSystem localFileSystem = FileSystem.getLocal(new Configuration());
+        //4 通过本地文件系统获取文件列表，为一个集合，将文件输入流复制到输出流
+        FileStatus[] fileStatuses = localFileSystem.listStatus(new Path("/User/martin/input"));
+        for (FileStatus fileStatus : fileStatuses) {
+            FSDataInputStream inputStream = localFileSystem.open(fileStatus.getPath());
+            org.apache.commons.io.IOUtils.copy(inputStream, fsDataOutputStream);
+            org.apache.commons.io.IOUtils.closeQuietly(inputStream);
+        }
+        org.apache.commons.io.IOUtils.closeQuietly(fsDataOutputStream);
+        localFileSystem.close();
+        fileSystem.close();
+    }
 
 }

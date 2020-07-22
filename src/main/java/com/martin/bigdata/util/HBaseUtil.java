@@ -42,13 +42,45 @@ public class HBaseUtil {
     }
 
     /**
+     * HBase 1.x 创建表
+     * @param tableName
+     * @param cfs
+     * @throws RuntimeException
+     * @throws IOException
+     */
+    public void createTable1(Admin admin, String tableName, String... cfs)
+            throws RuntimeException, IOException {
+
+        // 1 判断传入的列族信息是否为空
+        if (cfs.length <= 0) {
+            throw new RuntimeException("传入的列族信息是否为空");
+        }
+        // 2 判断表是否存在
+        if (admin.tableExists(TableName.valueOf(tableName))) {
+            throw new RuntimeException("无法创建已存在的表");
+        }
+        // 3 创建表描述器
+        HTableDescriptor hTableDescriptor = new HTableDescriptor(TableName.valueOf(tableName));
+        // 4 循环添加列族信息
+        for (String cf : cfs) {
+            // 4.1 创建列族描述器
+            HColumnDescriptor hColumnDescriptor = new HColumnDescriptor(cf);
+            // 4.2 添加列族信息
+            hTableDescriptor.addFamily(hColumnDescriptor);
+        }
+        // 5 创建表
+        admin.createTable(hTableDescriptor);
+
+    }
+
+    /**
      * HBase 2.x 创建表
      *
      * @param tableName
      * @param cfs
      * @throws Exception
      */
-    public static void createTable(Admin admin, String tableName, String... cfs)
+    public static void createTable2(Admin admin, String tableName, String... cfs)
             throws Exception {
 
 
@@ -117,7 +149,6 @@ public class HBaseUtil {
         logger.info("表 " + tableName + " 创建成功！");
 
     }
-
 
     /**
      * 删除表
@@ -255,7 +286,6 @@ public class HBaseUtil {
 
         table.close();
     }
-
 
     /**
      * 删除数据
