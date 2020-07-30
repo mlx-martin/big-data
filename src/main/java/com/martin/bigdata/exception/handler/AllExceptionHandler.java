@@ -1,15 +1,13 @@
 package com.martin.bigdata.exception.handler;
 
 import com.martin.bigdata.constant.ResponseConstant;
-import com.martin.bigdata.exception.FileNotExistException;
-import com.martin.bigdata.exception.NullFileNameException;
-import com.martin.bigdata.pojo.model.ResponseVO;
+import com.martin.bigdata.pojo.model.ResponseBodyVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import javax.servlet.http.HttpServletResponse;
+import java.util.Arrays;
 
 /**
  * @author martin
@@ -20,20 +18,12 @@ public class AllExceptionHandler {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
-    @ExceptionHandler(NullFileNameException.class)
-    public ResponseVO handleNullFileNameException(NullFileNameException e,HttpServletResponse response) {
-        ResponseVO responseVO = new ResponseVO(ResponseConstant.FAIL_STATUS,ResponseConstant.BAD_REQUEST_CODE,e.getMessage());
+    @ExceptionHandler(Exception.class)
+    public ResponseBodyVO<String> handleException(Exception e) {
+        ResponseBodyVO<String> responseBodyVO = new ResponseBodyVO<>(ResponseConstant.FAIL_STATUS, ResponseConstant.SERVER_ERROR_CODE, e.getMessage(),null);
         logger.error(e.getMessage());
-        logger.error(String.valueOf(e.getStackTrace()));
-        return responseVO;
-    }
-
-    @ExceptionHandler(FileNotExistException.class)
-    public ResponseVO handleFileNotExistException(FileNotExistException e, HttpServletResponse response ) {
-        ResponseVO responseVO = new ResponseVO(ResponseConstant.FAIL_STATUS, ResponseConstant.SERVER_ERROR_CODE, e.getMessage());
-        logger.error(e.getMessage());
-        logger.error(String.valueOf(e.getStackTrace()));
-        return responseVO;
+        logger.error(Arrays.toString(e.getStackTrace()));
+        return responseBodyVO;
     }
 
 }

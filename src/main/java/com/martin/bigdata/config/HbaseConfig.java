@@ -15,7 +15,7 @@ import java.io.IOException;
  */
 @Configuration
 @ConfigurationProperties(prefix = "hbase")
-public class HBaseConfig {
+public class HbaseConfig {
 
     private String zookeeperQuorum;
 

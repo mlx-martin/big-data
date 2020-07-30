@@ -38,6 +38,14 @@
             <optional>true</optional>
         </dependency>
 
+        <!-- zookeeper 开始 -->
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.5.8</version>
+        </dependency>
+        <!-- zookeeper 结束 -->
+
         <!-- hadoop 开始 -->
         <dependency>
             <groupId>org.apache.hadoop</groupId>
@@ -168,6 +176,10 @@
                     <artifactId>hadoop-auth</artifactId>
                     <groupId>org.apache.hadoop</groupId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>zookeeper</artifactId>
+                    <groupId>org.apache.zookeeper</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -226,6 +238,8 @@
             </exclusions>
         </dependency>
         <!-- hbase 结束 -->
+
+
 
 
         <!-- druid 数据库连接池 -->

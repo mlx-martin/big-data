@@ -1,5 +1,0 @@
-hbase:
-  phoenix:
-    datasource:
-      url: jdbc:phoenix:hadoop01,hadoop02,hadoop03:2181
-      driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver

@@ -42,7 +42,7 @@ public class BigDataApplicationTests {
     @Test
     public void createNamespaceTest() throws Exception {
         System.out.println(hbase.getConfiguration());
-        HBaseUtil.createNamespace(hbase, "ns1");
+        HBaseUtil.createNamespace(hbase, "ns3");
     }
 
     @Test
