@@ -1,9 +1,7 @@
 package com.martin.bigdata.controller;
 
-import com.martin.bigdata.constant.ResponseConstant;
 import com.martin.bigdata.exception.FileNotExistException;
 import com.martin.bigdata.exception.NullFileNameException;
-import com.martin.bigdata.pojo.model.ResponseVO;
 import com.martin.bigdata.util.HdfsUtil;
 import com.martin.bigdata.util.WebUtil;
 import org.apache.hadoop.fs.FileSystem;
@@ -40,9 +38,8 @@ public class HdfsController {
      * 使用 GET 请求方式下载，请求参数为 fileName
      */
     @GetMapping(value = "/download")
-    public String downloadFromHDFS(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void downloadFromHDFS(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-        ResponseVO responseVO = new ResponseVO(ResponseConstant.SUCCESS_STATUS, ResponseConstant.SUCCESS_CODE, ResponseConstant.SUCCESS_MESSAGE);
         String fileName = request.getParameter("fileName");
         String filePath = changJingYunDirectory + fileName;
 
@@ -64,7 +61,6 @@ public class HdfsController {
 
         logger.info(fileName + " 下载成功!");
 
-        return responseVO.toString();
     }
 
 }
