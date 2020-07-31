@@ -20,12 +20,14 @@ import java.util.Properties;
  */
 @Configuration
 @ConfigurationProperties(prefix = "hbase.phoenix")
-@MapperScan(basePackages = PhoenixConfig.PACKAGE, sqlSessionFactoryRef = PhoenixConfig.PHOENIX_SQL_SESSION_FACTORY)
+@MapperScan(basePackages = PhoenixConfig.MAPPER_PACKAGE, sqlSessionFactoryRef = PhoenixConfig.PHOENIX_SQL_SESSION_FACTORY)
 public class PhoenixConfig {
 
     static final String PHOENIX_SQL_SESSION_FACTORY = "phoenixSqlSessionFactory";
-    static final String PACKAGE = "com.martin.bigdata.mapper";
-    static String MAPPER_LOCATION = "classpath:/mybatis-mapper/*";
+    static final String MAPPER_PACKAGE = "com.martin.bigdata.mapper";
+    static final String MAPPER_LOCATION = "classpath:/mybatis-mapper/*";
+    static final String ENTITY_PACKAGE = "com.martin.bigdata.pojo.entity";
+
     private String url;
     private String driverClass;
     private String schemaIsNamespaceMappingEnabled;
@@ -58,6 +60,7 @@ public class PhoenixConfig {
             throws Exception {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(phoenixDataSource);
+        sessionFactory.setTypeAliasesPackage(ENTITY_PACKAGE);
         sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver()
                 .getResources(PhoenixConfig.MAPPER_LOCATION));
         return sessionFactory.getObject();

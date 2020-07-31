@@ -1,9 +1,10 @@
 package com.martin.bigdata.service;
 
-import com.martin.bigdata.mapper.TestMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.martin.bigdata.mapper.mysql.MysqlTestMapper;
+import com.martin.bigdata.mapper.phoenix.PhoenixTestMapper;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.UUID;
 
 /**
@@ -12,14 +13,21 @@ import java.util.UUID;
 @Service
 public class TestService {
 
-    @Autowired
-    private TestMapper testMapper;
+    @Resource
+    private PhoenixTestMapper phoenixTestMapper;
 
-    public void test(){
-        testMapper.test(UUID.randomUUID().toString().replaceAll("-", ""));
-    }
-    public void createTableTest(){
-        testMapper.createTableTest("mlxtest");
+    @Resource
+    private MysqlTestMapper mysqlTestMapper;
+
+    public void phoenixTest() {
+        phoenixTestMapper.test(UUID.randomUUID().toString().replaceAll("-", ""));
     }
 
+    public void createTableTest() {
+        phoenixTestMapper.createTableTest("mlxtest");
+    }
+
+    public void mysqlTest() {
+        System.out.println(mysqlTestMapper.test());
+    }
 }

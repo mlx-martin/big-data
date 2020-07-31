@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.martin.bigdata.mapper.phoenix.PhoenixTestMapper">
+
+<!--&lt;!&ndash;    <resultMap id="zl" type="com.css.dsj.server.model.DyZlYtjDO">&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TREE_CODE_PATH" property="treeCodePath" jdbcType="VARCHAR"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="PARTY_MEMBER" property="partyMember" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </resultMap>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <resultMap id="lb" type="com.css.dsj.server.model.DyLbYtjDO">&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TREE_CODE_PATH" property="treeCodePath" jdbcType="VARCHAR"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="FULL_PARTY_MEMBER" property="fullPartyMember" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="PROBATIONARY_PARTY_MEMBER" property="probationaryPartyMember" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </resultMap>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <resultMap id="xb" type="com.css.dsj.server.model.DyXbYtjDO">&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TREE_CODE_PATH" property="treeCodePath" jdbcType="VARCHAR"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="MALE_PARTY_MEMBER" property="malePartyMember" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="FEMALE_PARTY_MEMBER" property="femalePartyMember" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </resultMap>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <resultMap id="mz" type="com.css.dsj.server.model.DyMzYtjDO">&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TREE_CODE_PATH" property="treeCodePath" jdbcType="VARCHAR"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="HAN" property="han" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="MENGGU" property="menggu" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="HUI" property="hui" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="ZANG" property="zang" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="WEIWUER" property="weiwuer" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="MIAO" property="miao" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="BAI" property="bai" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DAI" property="dai" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="HASAKE" property="hasake" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="QIANG" property="qiang" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="OTHER_NATIONALITY" property="otherNationality" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </resultMap>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <resultMap id="mz2" type="com.css.dsj.server.model.DyMzYtjDO2">&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TREE_CODE_PATH" property="treeCodePath" jdbcType="VARCHAR"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="HAN" property="han" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="MENGGU" property="menggu" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="HUI" property="hui" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="ZANG" property="zang" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="WEIWUER" property="weiwuer" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="MIAO" property="miao" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="YI" property="yi" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="ZHUANG" property="zhuang" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="BUYI" property="buyi" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="CHAOXIAN" property="chaoxian" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="MAN" property="man" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DONG" property="dong" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="YAO" property="yao" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="BAI" property="bai" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TUJIA" property="tujia" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="HANI" property="hani" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="HASAKE" property="hasake" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DAI" property="dai" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="LI" property="li" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="LISU" property="lisu" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="WA" property="wa" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="SHE" property="she" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="GAOSHAN" property="gaoshan" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="LAHU" property="lahu" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="SHUI" property="shui" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DONGXIANG" property="dongxiang" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="NAXI" property="naxi" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JINGPO" property="jingpo" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="KEERKEZI" property="keerkezi" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TU" property="tu" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DAWOER" property="dawoer" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="MULAO" property="mulao" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="QIANG" property="qiang" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="BULANG" property="bulang" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="SALA" property="sala" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="MAONAN" property="maonan" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="GELAO" property="gelao" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="XIBO" property="xibo" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="ACHANG" property="achang" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="PUMI" property="pumi" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TAJIKE" property="tajike" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="NU" property="nu" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="WUZIBIEKE" property="wuzibieke" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="ELUOSI" property="eluosi" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="EWENKE" property="ewenke" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DEANG" property="deang" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="BAOAN" property="baoan" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="YUGU" property="yugu" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JING" property="jing" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TATAER" property="tataer" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DULONG" property="dulong" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="ELUNCHUN" property="elunchun" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="HEZHE" property="hezhe" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="MENBA" property="menba" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="LUOBA" property="luoba" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JINUO" property="jinuo" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="WGXT" property="wgxt" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="WGMZ" property="wgmz" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="QT" property="qt" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="MINORITY_NATIONALITY" property="minorityNationality" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </resultMap>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;    <resultMap id="xl" type="com.css.dsj.server.model.DyXlYtjDO">&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TREE_CODE_PATH" property="treeCodePath" jdbcType="VARCHAR"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="PRIMARY_SCHOOL" property="primarySchool" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JUNIOR_MIDDLE_SCHOOL" property="juniorMiddleSchool" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="SENIOR_MIDDLE_SCHOOL" property="seniorMiddleSchool" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="POLYTECHNIC_SCHOOL_ZJ" property="polytechnicSchoolZj" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="POLYTECHNIC_SCHOOL_ZZ" property="polytechnicSchoolZz" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="COLLEGE" property="college" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="UNIVERSITY" property="university" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="POSTGRADUATE" property="postgraduate" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </resultMap>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <resultMap id="zt" type="com.css.dsj.server.model.DyZtYtjDO">&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TREE_CODE_PATH" property="treeCodePath" jdbcType="VARCHAR"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="NEWLY_DEVELOPING_PARTY_MEMBER" property="newlyDevelopingPartyMember" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DEAD_PARTY_MEMBER" property="deadPartyMember" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="OUT_OF_THE_PARTY" property="outOfTheParty" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="STOPPED_PARTY_MEMBERSHIP" property="stoppedPartyMembership" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </resultMap>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <resultMap id="zzl" type="com.css.dsj.server.model.DyZzlYtjDO">&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TREE_CODE_PATH" property="treeCodePath" jdbcType="VARCHAR"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="GROWTH_OF_MEMBER_BEFORE_FIVE_YEARS" property="growthOfPartyMemberBeforeFiveYears" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="GROWTH_OF_MEMBER_BEFORE_FOUR_YEARS" property="growthOfPartyMemberBeforeFourYears" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="GROWTH_OF_MEMBER_BEFORE_THREE_YEARS" property="growthOfPartyMemberBeforeThreeYears" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="GROWTH_OF_MEMBER_BEFORE_TWO_YEARS" property="growthOfPartyMemberBeforeTwoYears" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="GROWTH_OF_MEMBER_BEFORE_ONE_YEAR" property="growthOfPartyMemberBeforeOneYear" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </resultMap>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <resultMap id="gzgw" type="com.css.dsj.server.model.DyGzgwYtjDO">&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TREE_CODE_PATH" property="treeCodePath" jdbcType="VARCHAR"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="STAFF" property="staff" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="NMYM" property="nmym" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="PLA_AND_ARMED_POLICE" property="plaAndArmedPolice" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="STUDENT" property="student" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="RETIRED_PERSONNEL" property="retiredPersonnel" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="OTHER_PERSONNEL" property="otherPersonnel" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </resultMap>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <resultMap id="nl" type="com.css.dsj.server.model.DyNlYtjDO">&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TREE_CODE_PATH" property="treeCodePath" jdbcType="VARCHAR"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="AGE_UP_TO_THIRTYFIVE" property="ageUpToThirtyfive" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="AGE_FROM_THIRTYSIX_TO_FORTYFIVE" property="ageFromThirtysixToFortyfive" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="AGE_FROM_FORTYSIX_TO_FIFTYFIVE" property="ageFromFortysixToFiftyfive" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="AGE_FROM_FIFTYSIX_TO_SIXTY" property="ageFromFiftysixToSixty" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="AGE_GREATER_THAN_SIXTY" property="ageGreaterThanSixty" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </resultMap>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <resultMap id="rdrq" type="com.css.dsj.server.model.DyRdrqYtjDO">&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TREE_CODE_PATH" property="treeCodePath" jdbcType="VARCHAR"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_BEFORE_19450902" property="joinBefore19450902" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_FROM_19450903_TO_19490930" property="joinFrom19450903To19490930" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_FROM_19491001_TO_19660430" property="joinFrom19491001To19660430" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_FROM_19660501_TO_19761031" property="joinFrom19660501To19761031" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_FROM_19761101_TO_19781231" property="joinFrom19761101To19781231" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_FROM_19790101_TO_20121031" property="joinFrom19790101To20121031" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_AFTER_20121101" property="joinAfter20121101" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </resultMap>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <resultMap id="swnl" type="com.css.dsj.server.model.DySwnlYtjDO">&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TREE_CODE_PATH" property="treeCodePath" jdbcType="VARCHAR"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DWXZLB_DM" property="dwxzlbDm" jdbcType="VARCHAR"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DEATH_BEFORE_EIGHTEEN" property="deathBeforeEighteen" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DEATH_FROM_NINETEEN_TO_THIRTYFIVE" property="deathFromNineteenToThirtyfive" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DEATH_FROM_THIRTYSIX_TO_FORTYFIVE" property="deathFromThirtysixToFortyfive" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DEATH_FROM_FORTYSIX_TO_FIFTYFIVE" property="deathFromFortysixToFiftyfive" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DEATH_FROM_FIFTYSIX_TO_SIXTY" property="deathFromFiftysixToSixty" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DEATH_FROM_SIXTYONE_TO_SIXTYFIVE" property="deathFromSixtyoneToSixtyfive" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DEATH_FROM_SIXTYSIX_TO_SEVENTY" property="deathFromSixtysixToSeventy" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DEATH_FROM_SEVENTYONE_TO_SEVENTYFIVE" property="deathFromSeventyoneToSeventyfive" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DEATH_FROM_SEVENTYSIX_TO_EIGHTY" property="deathFromSeventysixToEighty" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DEATH_FROM_EIGHTYONE_TO_EIGHTYFIVE" property="deathFromEightyoneToEightyfive" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DEATH_FROM_EIGHTSIX_TO_NINETY" property="deathFromEightysixToNinety" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DEATH_FROM_NINETYONE_TO_NINETYFIVE" property="deathFromNinetyoneToNinetyfive" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="DEATH_FROM_NINETYSIX_TO_ONEHUNDRED" property="deathFromNinetysixToOneHundred" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </resultMap>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <resultMap id="rdnl" type="com.css.dsj.server.model.DyRdnlYtjDO">&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="TREE_CODE_PATH" property="treeCodePath" jdbcType="VARCHAR"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="XL_DM" property="xlDm" jdbcType="VARCHAR"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_BEFORE_SEVENTEEN" property="joinBeforeSeventeen" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_AT_EIGHTEEN" property="joinAtEighteen" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_AT_NINETEEN" property="joinAtNineteen" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_FROM_TWENTY_TO_TWENTYEIGHT" property="joinFromTwentyToTwentyeight" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_FROM_TWENTYNINE_TO_THIRTYFIVE" property="joinFromTwentynineToThirtyfive" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_FROM_THIRTYSIX_TO_FORTYFIVE" property="joinFromThirtySixToFortyfive" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_FROM_FORTYSIX_TO_SIXTY" property="joinFromFortySixToSixty" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_FROM_SIXTYONE_TO_SEVENTY" property="joinFromSixtyOneToSeventy" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="JOIN_AFTER_SEVENTY" property="joinAfterSeventy" jdbcType="INTEGER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </resultMap>&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;党员总量&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <select id="dyZlYtj" resultMap="zl">&ndash;&gt;-->
+<!--&lt;!&ndash;            SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;                "dyInfo"."TREECODEPATH" TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;                COUNT(1) PARTY_MEMBER&ndash;&gt;-->
+<!--&lt;!&ndash;            FROM "dy_gz_202002_18"&ndash;&gt;-->
+<!--&lt;!&ndash;            WHERE "dyInfo"."ZFBZ" = '0'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."GZGW_DM" IS NOT NULL&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYZT_DM" = '1000000003'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYLB_DM" IN ('1000000001','2000000002')&ndash;&gt;-->
+<!--&lt;!&ndash;            GROUP BY "dyInfo"."TREECODEPATH"&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <update id="saveDyZlYtj">&ndash;&gt;-->
+<!--&lt;!&ndash;        UPSERT INTO "DY_ZL_YTJ"(&ndash;&gt;-->
+<!--&lt;!&ndash;            "TREE_CODE_PATH",&ndash;&gt;-->
+<!--&lt;!&ndash;            "PARTY_MEMBER"&ndash;&gt;-->
+<!--&lt;!&ndash;        ) VALUES(&ndash;&gt;-->
+<!--&lt;!&ndash;            '${treeCodePath}',&ndash;&gt;-->
+<!--&lt;!&ndash;            ${partyMember}&ndash;&gt;-->
+<!--&lt;!&ndash;        )&ndash;&gt;-->
+<!--&lt;!&ndash;    </update>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <update id="saveDyZlYtj2">&ndash;&gt;-->
+<!--&lt;!&ndash;        UPSERT INTO "DY_JBQK_YTJ"(&ndash;&gt;-->
+<!--&lt;!&ndash;            "TREE_CODE_PATH",&ndash;&gt;-->
+<!--&lt;!&ndash;            "PARTY_MEMBER"&ndash;&gt;-->
+<!--&lt;!&ndash;        ) VALUES(&ndash;&gt;-->
+<!--&lt;!&ndash;            '${treeCodePath}',&ndash;&gt;-->
+<!--&lt;!&ndash;            ${partyMember}&ndash;&gt;-->
+<!--&lt;!&ndash;        )&ndash;&gt;-->
+<!--&lt;!&ndash;    </update>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <select id="queryDyZl" resultMap="zl">&ndash;&gt;-->
+<!--&lt;!&ndash;            SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;                #{treeCodePath} TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("PARTY_MEMBER") PARTY_MEMBER&ndash;&gt;-->
+<!--&lt;!&ndash;            FROM "DY_ZL_YTJ"&ndash;&gt;-->
+<!--&lt;!&ndash;            WHERE TREE_CODE_PATH LIKE #{treeCodePath}&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;党员类别&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <select id="dyLbYtj" resultMap="lb">&ndash;&gt;-->
+<!--&lt;!&ndash;            SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;                "dyInfo"."TREECODEPATH" TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;                COUNT(CASE WHEN "dyInfo"."DYLB_DM"='1000000001' THEN 1 END) FULL_PARTY_MEMBER,&ndash;&gt;-->
+<!--&lt;!&ndash;                COUNT(CASE WHEN "dyInfo"."DYLB_DM"='2000000002' THEN 1 END) PROBATIONARY_PARTY_MEMBER&ndash;&gt;-->
+<!--&lt;!&ndash;            FROM "dy_gz_202002_18"&ndash;&gt;-->
+<!--&lt;!&ndash;            WHERE "dyInfo"."ZFBZ" = '0'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."GZGW_DM" IS NOT NULL&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYZT_DM" = '1000000003'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYLB_DM" IN ('1000000001','2000000002')&ndash;&gt;-->
+<!--&lt;!&ndash;            GROUP BY "dyInfo"."TREECODEPATH"&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <update id="saveDyLbYtj">&ndash;&gt;-->
+<!--&lt;!&ndash;        UPSERT INTO "DY_LB_YTJ"(&ndash;&gt;-->
+<!--&lt;!&ndash;            "TREE_CODE_PATH",&ndash;&gt;-->
+<!--&lt;!&ndash;            "FULL_PARTY_MEMBER",&ndash;&gt;-->
+<!--&lt;!&ndash;            "PROBATIONARY_PARTY_MEMBER"&ndash;&gt;-->
+<!--&lt;!&ndash;        ) VALUES(&ndash;&gt;-->
+<!--&lt;!&ndash;            '${treeCodePath}',&ndash;&gt;-->
+<!--&lt;!&ndash;            ${fullPartyMember},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${probationaryPartyMember}&ndash;&gt;-->
+<!--&lt;!&ndash;        )&ndash;&gt;-->
+<!--&lt;!&ndash;    </update>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <update id="saveDyLbYtj2">&ndash;&gt;-->
+<!--&lt;!&ndash;        UPSERT INTO "DY_LB_YTJ"(&ndash;&gt;-->
+<!--&lt;!&ndash;            "TREE_CODE_PATH",&ndash;&gt;-->
+<!--&lt;!&ndash;            "FULL_PARTY_MEMBER",&ndash;&gt;-->
+<!--&lt;!&ndash;            "PROBATIONARY_PARTY_MEMBER"&ndash;&gt;-->
+<!--&lt;!&ndash;        ) VALUES(&ndash;&gt;-->
+<!--&lt;!&ndash;            '${treeCodePath}',&ndash;&gt;-->
+<!--&lt;!&ndash;            ${fullPartyMember},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${probationaryPartyMember}&ndash;&gt;-->
+<!--&lt;!&ndash;        )&ndash;&gt;-->
+<!--&lt;!&ndash;    </update>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <select id="queryDyLb" resultMap="lb">&ndash;&gt;-->
+<!--&lt;!&ndash;            SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;                #{treeCodePath} TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("FULL_PARTY_MEMBER") FULL_PARTY_MEMBER,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("PROBATIONARY_PARTY_MEMBER") PROBATIONARY_PARTY_MEMBER&ndash;&gt;-->
+<!--&lt;!&ndash;            FROM "DY_LB_YTJ"&ndash;&gt;-->
+<!--&lt;!&ndash;            WHERE TREE_CODE_PATH LIKE #{treeCodePath}&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;党员性别&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <select id="dyXbYtj" resultMap="xb">&ndash;&gt;-->
+<!--&lt;!&ndash;        SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;            "dyInfo"."TREECODEPATH" TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."XB_DM",0,1)='1' THEN 1 END) MALE_PARTY_MEMBER,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."XB_DM",0,1)='2' THEN 1 END) FEMALE_PARTY_MEMBER&ndash;&gt;-->
+<!--&lt;!&ndash;        FROM "dy_gz_202002_18"&ndash;&gt;-->
+<!--&lt;!&ndash;        WHERE "dyInfo"."ZFBZ" = '0'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."GZGW_DM" IS NOT NULL&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYZT_DM" = '1000000003'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYLB_DM" IN ('1000000001','2000000002')&ndash;&gt;-->
+<!--&lt;!&ndash;        GROUP BY "dyInfo"."TREECODEPATH"&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <update id="saveDyXbYtj">&ndash;&gt;-->
+<!--&lt;!&ndash;        UPSERT INTO "DY_XB_YTJ"(&ndash;&gt;-->
+<!--&lt;!&ndash;            "TREE_CODE_PATH",&ndash;&gt;-->
+<!--&lt;!&ndash;            "MALE_PARTY_MEMBER",&ndash;&gt;-->
+<!--&lt;!&ndash;            "FEMALE_PARTY_MEMBER"&ndash;&gt;-->
+<!--&lt;!&ndash;        ) VALUES(&ndash;&gt;-->
+<!--&lt;!&ndash;            '${treeCodePath}',&ndash;&gt;-->
+<!--&lt;!&ndash;            ${malePartyMember},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${femalePartyMember}&ndash;&gt;-->
+<!--&lt;!&ndash;        )&ndash;&gt;-->
+<!--&lt;!&ndash;    </update>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <select id="queryDyXb" resultMap="xb">&ndash;&gt;-->
+<!--&lt;!&ndash;            SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;                #{treeCodePath} TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("MALE_PARTY_MEMBER") MALE_PARTY_MEMBER,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("FEMALE_PARTY_MEMBER") FEMALE_PARTY_MEMBER&ndash;&gt;-->
+<!--&lt;!&ndash;            FROM "DY_XB_YTJ"&ndash;&gt;-->
+<!--&lt;!&ndash;            WHERE TREE_CODE_PATH LIKE #{treeCodePath}&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;党员民族&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <select id="dyMzYtj" resultMap="mz">&ndash;&gt;-->
+<!--&lt;!&ndash;        SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;            "dyInfo"."TREECODEPATH" TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN "dyInfo"."MZ_DM"='0100000037' THEN 1 END) HAN,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN "dyInfo"."MZ_DM"='0200000001' THEN 1 END) MENGGU,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN "dyInfo"."MZ_DM"='0300000002' THEN 1 END) HUI,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN "dyInfo"."MZ_DM"='0400000038' THEN 1 END) ZANG,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN "dyInfo"."MZ_DM"='0500000039' THEN 1 END) WEIWUER,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN "dyInfo"."MZ_DM"='0600000040' THEN 1 END) MIAO,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN "dyInfo"."MZ_DM"='1400000048' THEN 1 END) BAI,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN "dyInfo"."MZ_DM"='1800000052' THEN 1 END) DAI,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN "dyInfo"."MZ_DM"='1700000051' THEN 1 END) HASAKE,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN "dyInfo"."MZ_DM"='3300000014' THEN 1 END) QIANG,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN "dyInfo"."MZ_DM" NOT IN ('0100000037','0200000001','0300000002','0400000038','0500000039','0600000040','1400000048','1800000052','1700000051','3300000014') THEN 1 END) OTHER_NATIONALITY&ndash;&gt;-->
+
+<!--&lt;!&ndash;        FROM "dy_gz_202002_18"&ndash;&gt;-->
+<!--&lt;!&ndash;        WHERE "dyInfo"."ZFBZ" = '0'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."GZGW_DM" IS NOT NULL&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYZT_DM" = '1000000003'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYLB_DM" IN ('1000000001','2000000002')&ndash;&gt;-->
+<!--&lt;!&ndash;        GROUP BY "dyInfo"."TREECODEPATH"&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <update id="saveDyMzYtj">&ndash;&gt;-->
+<!--&lt;!&ndash;        UPSERT INTO "DY_MZ_YTJ"(&ndash;&gt;-->
+<!--&lt;!&ndash;            "TREE_CODE_PATH",&ndash;&gt;-->
+<!--&lt;!&ndash;            "HAN",&ndash;&gt;-->
+<!--&lt;!&ndash;            "MENGGU",&ndash;&gt;-->
+<!--&lt;!&ndash;            "HUI",&ndash;&gt;-->
+<!--&lt;!&ndash;            "ZANG",&ndash;&gt;-->
+<!--&lt;!&ndash;            "WEIWUER",&ndash;&gt;-->
+<!--&lt;!&ndash;            "MIAO",&ndash;&gt;-->
+<!--&lt;!&ndash;            "BAI",&ndash;&gt;-->
+<!--&lt;!&ndash;            "DAI",&ndash;&gt;-->
+<!--&lt;!&ndash;            "HASAKE",&ndash;&gt;-->
+<!--&lt;!&ndash;            "QIANG",&ndash;&gt;-->
+<!--&lt;!&ndash;            "OTHER_NATIONALITY"&ndash;&gt;-->
+<!--&lt;!&ndash;        ) VALUES(&ndash;&gt;-->
+<!--&lt;!&ndash;            '${treeCodePath}',&ndash;&gt;-->
+<!--&lt;!&ndash;            ${han},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${menggu},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${hui},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${zang},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${weiwuer},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${miao},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${bai},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${dai},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${hasake},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${qiang},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${otherNationality}&ndash;&gt;-->
+<!--&lt;!&ndash;        )&ndash;&gt;-->
+<!--&lt;!&ndash;    </update>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <select id="queryDyMz" resultMap="mz">&ndash;&gt;-->
+<!--&lt;!&ndash;            SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;                #{treeCodePath} TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("HAN") HAN,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("MENGGU") MENGGU,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("HUI") HUI,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("ZANG") ZANG,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("WEIWUER") WEIWUER,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("MIAO") MIAO,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("BAI") BAI,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("DAI") DAI,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("HASAKE") HASAKE,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("QIANG") QIANG,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("OTHER_NATIONALITY") OTHER_NATIONALITY&ndash;&gt;-->
+<!--&lt;!&ndash;            FROM "DY_MZ_YTJ"&ndash;&gt;-->
+<!--&lt;!&ndash;            WHERE TREE_CODE_PATH LIKE #{treeCodePath}&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    &lt;!&ndash;党员民族2&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <select id="dyMzYtj2" resultMap="mz2">&ndash;&gt;-->
+<!--&lt;!&ndash;        SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;            "dyInfo"."TREECODEPATH" TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='01' THEN 1 END) HAN,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='02' THEN 1 END) MENGGU,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='03' THEN 1 END) HUI,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='04' THEN 1 END) ZANG,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='05' THEN 1 END) WEIWUER,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='06' THEN 1 END) MIAO,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='07' THEN 1 END) YI,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='08' THEN 1 END) ZHUANG,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='09' THEN 1 END) BUYI,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='10' THEN 1 END) CHAOXIAN,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='11' THEN 1 END) MAN,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='12' THEN 1 END) DONG,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='13' THEN 1 END) YAO,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='14' THEN 1 END) BAI,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='15' THEN 1 END) TUJIA,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='16' THEN 1 END) HANI,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='17' THEN 1 END) HASAKE,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='18' THEN 1 END) DAI,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='19' THEN 1 END) LI,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='20' THEN 1 END) LISU,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='21' THEN 1 END) WA,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='22' THEN 1 END) SHE,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='23' THEN 1 END) GAOSHAN,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='24' THEN 1 END) LAHU,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='25' THEN 1 END) SHUI,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='26' THEN 1 END) DONGXIANG,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='27' THEN 1 END) NAXI,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='28' THEN 1 END) JINGPO,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='29' THEN 1 END) KEERKEZI,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='30' THEN 1 END) TU,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='31' THEN 1 END) DAWOER,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='32' THEN 1 END) MULAO,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='33' THEN 1 END) QIANG,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='34' THEN 1 END) BULANG,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='35' THEN 1 END) SALA,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='36' THEN 1 END) MAONAN,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='37' THEN 1 END) GELAO,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='38' THEN 1 END) XIBO,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='39' THEN 1 END) ACHANG,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='40' THEN 1 END) PUMI,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='41' THEN 1 END) TAJIKE,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='42' THEN 1 END) NU,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='43' THEN 1 END) WUZIBIEKE,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='44' THEN 1 END) ELUOSI,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='45' THEN 1 END) EWENKE,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='46' THEN 1 END) DEANG,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='47' THEN 1 END) BAOAN,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='48' THEN 1 END) YUGU,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='49' THEN 1 END) JING,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='50' THEN 1 END) TATAER,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='51' THEN 1 END) DULONG,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='52' THEN 1 END) ELUNCHUN,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='53' THEN 1 END) HEZHE,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='54' THEN 1 END) MENBA,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='55' THEN 1 END) LUOBA,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='56' THEN 1 END) JINUO,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='57' THEN 1 END) WGXT,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='58' THEN 1 END) WGMZ,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."MZ_DM",0,2)='99' THEN 1 END) QT&ndash;&gt;-->
+<!--&lt;!&ndash;        FROM "dy_gz_202002_18"&ndash;&gt;-->
+<!--&lt;!&ndash;        WHERE "dyInfo"."ZFBZ" = '0'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."GZGW_DM" IS NOT NULL&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYZT_DM" = '1000000003'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYLB_DM" IN ('1000000001','2000000002')&ndash;&gt;-->
+<!--&lt;!&ndash;        GROUP BY "dyInfo"."TREECODEPATH"&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <update id="saveDyMzYtj2">&ndash;&gt;-->
+<!--&lt;!&ndash;        UPSERT INTO "DY_MZ_YTJ2"(&ndash;&gt;-->
+<!--&lt;!&ndash;            "TREE_CODE_PATH",&ndash;&gt;-->
+<!--&lt;!&ndash;            "HAN",&ndash;&gt;-->
+<!--&lt;!&ndash;            "MENGGU",&ndash;&gt;-->
+<!--&lt;!&ndash;            "HUI",&ndash;&gt;-->
+<!--&lt;!&ndash;            "ZANG",&ndash;&gt;-->
+<!--&lt;!&ndash;            "WEIWUER",&ndash;&gt;-->
+<!--&lt;!&ndash;            "MIAO",&ndash;&gt;-->
+<!--&lt;!&ndash;            "YI",&ndash;&gt;-->
+<!--&lt;!&ndash;            "ZHUANG",&ndash;&gt;-->
+<!--&lt;!&ndash;            "BUYI",&ndash;&gt;-->
+<!--&lt;!&ndash;            "CHAOXIAN",&ndash;&gt;-->
+<!--&lt;!&ndash;            "MAN",&ndash;&gt;-->
+<!--&lt;!&ndash;            "DONG",&ndash;&gt;-->
+<!--&lt;!&ndash;            "YAO",&ndash;&gt;-->
+<!--&lt;!&ndash;            "BAI",&ndash;&gt;-->
+<!--&lt;!&ndash;            "TUJIA",&ndash;&gt;-->
+<!--&lt;!&ndash;            "HANI",&ndash;&gt;-->
+<!--&lt;!&ndash;            "HASAKE",&ndash;&gt;-->
+<!--&lt;!&ndash;            "DAI",&ndash;&gt;-->
+<!--&lt;!&ndash;            "LI",&ndash;&gt;-->
+<!--&lt;!&ndash;            "LISU",&ndash;&gt;-->
+<!--&lt;!&ndash;            "WA",&ndash;&gt;-->
+<!--&lt;!&ndash;            "SHE",&ndash;&gt;-->
+<!--&lt;!&ndash;            "GAOSHAN",&ndash;&gt;-->
+<!--&lt;!&ndash;            "LAHU",&ndash;&gt;-->
+<!--&lt;!&ndash;            "SHUI",&ndash;&gt;-->
+<!--&lt;!&ndash;            "DONGXIANG",&ndash;&gt;-->
+<!--&lt;!&ndash;            "NAXI",&ndash;&gt;-->
+<!--&lt;!&ndash;            "JINGPO",&ndash;&gt;-->
+<!--&lt;!&ndash;            "KEERKEZI",&ndash;&gt;-->
+<!--&lt;!&ndash;            "TU",&ndash;&gt;-->
+<!--&lt;!&ndash;            "DAWOER",&ndash;&gt;-->
+<!--&lt;!&ndash;            "MULAO",&ndash;&gt;-->
+<!--&lt;!&ndash;            "QIANG",&ndash;&gt;-->
+<!--&lt;!&ndash;            "BULANG",&ndash;&gt;-->
+<!--&lt;!&ndash;            "SALA",&ndash;&gt;-->
+<!--&lt;!&ndash;            "MAONAN",&ndash;&gt;-->
+<!--&lt;!&ndash;            "GELAO",&ndash;&gt;-->
+<!--&lt;!&ndash;            "XIBO",&ndash;&gt;-->
+<!--&lt;!&ndash;            "ACHANG",&ndash;&gt;-->
+<!--&lt;!&ndash;            "PUMI",&ndash;&gt;-->
+<!--&lt;!&ndash;            "TAJIKE",&ndash;&gt;-->
+<!--&lt;!&ndash;            "NU",&ndash;&gt;-->
+<!--&lt;!&ndash;            "WUZIBIEKE",&ndash;&gt;-->
+<!--&lt;!&ndash;            "ELUOSI",&ndash;&gt;-->
+<!--&lt;!&ndash;            "EWENKE",&ndash;&gt;-->
+<!--&lt;!&ndash;            "DEANG",&ndash;&gt;-->
+<!--&lt;!&ndash;            "BAOAN",&ndash;&gt;-->
+<!--&lt;!&ndash;            "YUGU",&ndash;&gt;-->
+<!--&lt;!&ndash;            "JING",&ndash;&gt;-->
+<!--&lt;!&ndash;            "TATAER",&ndash;&gt;-->
+<!--&lt;!&ndash;            "DULONG",&ndash;&gt;-->
+<!--&lt;!&ndash;            "ELUNCHUN",&ndash;&gt;-->
+<!--&lt;!&ndash;            "HEZHE",&ndash;&gt;-->
+<!--&lt;!&ndash;            "MENBA",&ndash;&gt;-->
+<!--&lt;!&ndash;            "LUOBA",&ndash;&gt;-->
+<!--&lt;!&ndash;            "JINUO",&ndash;&gt;-->
+<!--&lt;!&ndash;            "WGXT",&ndash;&gt;-->
+<!--&lt;!&ndash;            "WGMZ",&ndash;&gt;-->
+<!--&lt;!&ndash;            "QT",&ndash;&gt;-->
+<!--&lt;!&ndash;            "MINORITY_NATIONALITY"&ndash;&gt;-->
+<!--&lt;!&ndash;        ) VALUES(&ndash;&gt;-->
+<!--&lt;!&ndash;            '${treeCodePath}',&ndash;&gt;-->
+<!--&lt;!&ndash;            ${han},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${menggu},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${hui},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${zang},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${weiwuer},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${miao},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${yi},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${zhuang},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${buyi},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${chaoxian},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${man},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${dong},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${yao},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${bai},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${tujia},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${hani},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${hasake},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${dai},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${li},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${lisu},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${wa},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${she},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${gaoshan},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${lahu},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${shui},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${dongxiang},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${naxi},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${jingpo},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${keerkezi},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${tu},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${dawoer},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${mulao},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${qiang},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${bulang},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${sala},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${maonan},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${gelao},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${xibo},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${achang},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${pumi},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${tajike},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${nu},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${wuzibieke},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${eluosi},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${ewenke},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${deang},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${baoan},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${yugu},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${jing},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${tataer},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${dulong},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${elunchun},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${hezhe},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${menba},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${luoba},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${jinuo},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${wgxt},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${wgmz},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${qt},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${minorityNationality}&ndash;&gt;-->
+<!--&lt;!&ndash;        )&ndash;&gt;-->
+<!--&lt;!&ndash;    </update>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;    <select id="queryDyMz2" resultMap="mz2">&ndash;&gt;-->
+<!--&lt;!&ndash;            SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;                #{treeCodePath} TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("HAN") HAN,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("MENGGU") MENGGU,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("HUI") HUI,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("ZANG") ZANG,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("WEIWUER") WEIWUER,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("MIAO") MIAO,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("YI") YI,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("ZHUANG") ZHUANG,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("BUYI") BUYI,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("CHAOXIAN") CHAOXIAN,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("MAN") MAN,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("DONG") DONG,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("YAO") YAO,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("BAI") BAI,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("TUJIA") TUJIA,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("HANI") HANI,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("HASAKE") HASAKE,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("DAI") DAI,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("LI") LI,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("LISU") LISU,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("WA") WA,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("SHE") SHE,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("GAOSHAN") GAOSHAN,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("LAHU") LAHU,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("SHUI") SHUI,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("DONGXIANG") DONGXIANG,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("NAXI") NAXI,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("JINGPO") JINGPO,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("KEERKEZI") KEERKEZI,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("TU") TU,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("DAWOER") DAWOER,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("MULAO") MULAO,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("QIANG") QIANG,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("BULANG") BULANG,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("SALA") SALA,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("MAONAN") MAONAN,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("GELAO") GELAO,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("XIBO") XIBO,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("ACHANG") ACHANG,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("PUMI") PUMI,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("TAJIKE") TAJIKE,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("NU") NU,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("WUZIBIEKE") WUZIBIEKE,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("ELUOSI") ELUOSI,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("EWENKE") EWENKE,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("DEANG") DEANG,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("BAOAN") BAOAN,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("YUGU") YUGU,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("JING") JING,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("TATAER") TATAER,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("DULONG") DULONG,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("ELUNCHUN") ELUNCHUN,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("HEZHE") HEZHE,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("MENBA") MENBA,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("LUOBA") LUOBA,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("JINUO") JINUO,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("WGXT") WGXT,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("WGMZ") WGMZ,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("QT") QT,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("MINORITY_NATIONALITY") MINORITY_NATIONALITY&ndash;&gt;-->
+<!--&lt;!&ndash;            FROM "DY_MZ_YTJ2"&ndash;&gt;-->
+<!--&lt;!&ndash;            WHERE TREE_CODE_PATH LIKE #{treeCodePath}&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;    &lt;!&ndash;党员学历&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <select id="dyXlYtj" resultMap="xl">&ndash;&gt;-->
+<!--&lt;!&ndash;        SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;            "dyInfo"."TREECODEPATH" TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."XL_DM",0,1)='1' THEN 1 END) POSTGRADUATE,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."XL_DM",0,1)='2' THEN 1 END) UNIVERSITY,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."XL_DM",0,1)='3' THEN 1 END) COLLEGE,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."XL_DM",0,1)='4' THEN 1 END) POLYTECHNIC_SCHOOL_ZZ,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."XL_DM",0,1)='5' THEN 1 END) POLYTECHNIC_SCHOOL_ZJ,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."XL_DM",0,1)='6' THEN 1 END) SENIOR_MIDDLE_SCHOOL,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."XL_DM",0,1)='7' THEN 1 END) JUNIOR_MIDDLE_SCHOOL,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."XL_DM",0,1)='8' THEN 1 END) PRIMARY_SCHOOL&ndash;&gt;-->
+<!--&lt;!&ndash;        FROM "dy_gz_202002_18"&ndash;&gt;-->
+<!--&lt;!&ndash;        WHERE "dyInfo"."ZFBZ" = '0'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."GZGW_DM" IS NOT NULL&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYZT_DM" = '1000000003'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYLB_DM" IN ('1000000001','2000000002')&ndash;&gt;-->
+<!--&lt;!&ndash;        GROUP BY "dyInfo"."TREECODEPATH"&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <update id="saveDyXlYtj">&ndash;&gt;-->
+<!--&lt;!&ndash;        UPSERT INTO "DY_XL_YTJ"(&ndash;&gt;-->
+<!--&lt;!&ndash;            "TREE_CODE_PATH",&ndash;&gt;-->
+<!--&lt;!&ndash;            "PRIMARY_SCHOOL",&ndash;&gt;-->
+<!--&lt;!&ndash;            "JUNIOR_MIDDLE_SCHOOL",&ndash;&gt;-->
+<!--&lt;!&ndash;            "SENIOR_MIDDLE_SCHOOL",&ndash;&gt;-->
+<!--&lt;!&ndash;            "POLYTECHNIC_SCHOOL_ZJ",&ndash;&gt;-->
+<!--&lt;!&ndash;            "POLYTECHNIC_SCHOOL_ZZ",&ndash;&gt;-->
+<!--&lt;!&ndash;            "COLLEGE",&ndash;&gt;-->
+<!--&lt;!&ndash;            "UNIVERSITY",&ndash;&gt;-->
+<!--&lt;!&ndash;            "POSTGRADUATE"&ndash;&gt;-->
+<!--&lt;!&ndash;        )VALUES(&ndash;&gt;-->
+<!--&lt;!&ndash;            '${treeCodePath}',&ndash;&gt;-->
+<!--&lt;!&ndash;            ${primarySchool},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${juniorMiddleSchool},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${seniorMiddleSchool},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${polytechnicSchoolZj},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${polytechnicSchoolZz},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${college},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${university},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${postgraduate}&ndash;&gt;-->
+<!--&lt;!&ndash;        )&ndash;&gt;-->
+<!--&lt;!&ndash;    </update>&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;    <select id="queryDyXl" resultMap="xl">&ndash;&gt;-->
+<!--&lt;!&ndash;            SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;                #{treeCodePath} TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("PRIMARY_SCHOOL") PRIMARY_SCHOOL,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("JUNIOR_MIDDLE_SCHOOL") JUNIOR_MIDDLE_SCHOOL,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("SENIOR_MIDDLE_SCHOOL") SENIOR_MIDDLE_SCHOOL,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("POLYTECHNIC_SCHOOL_ZJ") POLYTECHNIC_SCHOOL_ZJ,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("POLYTECHNIC_SCHOOL_ZZ") POLYTECHNIC_SCHOOL_ZZ,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("COLLEGE") COLLEGE,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("UNIVERSITY") UNIVERSITY,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("POSTGRADUATE") POSTGRADUATE&ndash;&gt;-->
+<!--&lt;!&ndash;            FROM "DY_XL_YTJ"&ndash;&gt;-->
+<!--&lt;!&ndash;            WHERE TREE_CODE_PATH LIKE #{treeCodePath}&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;党员状态&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <select id="dyZtYtj" resultMap="zt">&ndash;&gt;-->
+<!--&lt;!&ndash;        SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;            "dyInfo"."TREECODEPATH" TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN "dyInfo"."DYLB_DM"='2000000002' AND YEAR(TO_DATE("dyInfo"."RDRQ"))=YEAR(NOW()) THEN 1 END) NEWLY_DEVELOPING_PARTY_MEMBER,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."DYZT_DM",0,1)='2' THEN 1 END) DEAD_PARTY_MEMBER,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."DYZT_DM",0,1)='3' THEN 1 END) OUT_OF_THE_PARTY,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."DYZT_DM",0,1)='4' THEN 1 END) STOPPED_PARTY_MEMBERSHIP&ndash;&gt;-->
+<!--&lt;!&ndash;        FROM "dy_gz_202002_18"&ndash;&gt;-->
+<!--&lt;!&ndash;        GROUP BY "dyInfo"."TREECODEPATH"&ndash;&gt;-->
+
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <update id="saveDyZtYtj">&ndash;&gt;-->
+<!--&lt;!&ndash;        UPSERT INTO "DY_ZT_YTJ"(&ndash;&gt;-->
+<!--&lt;!&ndash;            "TREE_CODE_PATH",&ndash;&gt;-->
+<!--&lt;!&ndash;            "NEWLY_DEVELOPING_PARTY_MEMBER",&ndash;&gt;-->
+<!--&lt;!&ndash;            "DEAD_PARTY_MEMBER",&ndash;&gt;-->
+<!--&lt;!&ndash;            "OUT_OF_THE_PARTY",&ndash;&gt;-->
+<!--&lt;!&ndash;            "STOPPED_PARTY_MEMBERSHIP"&ndash;&gt;-->
+<!--&lt;!&ndash;        ) VALUES(&ndash;&gt;-->
+<!--&lt;!&ndash;            '${treeCodePath}',&ndash;&gt;-->
+<!--&lt;!&ndash;            ${newlyDevelopingPartyMember},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${deadPartyMember},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${outOfTheParty},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${stoppedPartyMembership}&ndash;&gt;-->
+<!--&lt;!&ndash;        )&ndash;&gt;-->
+<!--&lt;!&ndash;    </update>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <select id="queryDyZt" resultMap="zt">&ndash;&gt;-->
+<!--&lt;!&ndash;            SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;                #{treeCodePath} TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("NEWLY_DEVELOPING_PARTY_MEMBER") NEWLY_DEVELOPING_PARTY_MEMBER,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("DEAD_PARTY_MEMBER") DEAD_PARTY_MEMBER,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("OUT_OF_THE_PARTY") OUT_OF_THE_PARTY,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("STOPPED_PARTY_MEMBERSHIP") STOPPED_PARTY_MEMBERSHIP&ndash;&gt;-->
+<!--&lt;!&ndash;            FROM "DY_ZT_YTJ"&ndash;&gt;-->
+<!--&lt;!&ndash;            WHERE TREE_CODE_PATH LIKE #{treeCodePath}&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;党员增长量&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <select id="dyZzlYtj" resultMap="zzl">&ndash;&gt;-->
+<!--&lt;!&ndash;        SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;            "dyInfo"."TREECODEPATH" TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN YEAR(TO_DATE("dyInfo"."RDRQ"))=YEAR(NOW())-5 THEN 1 END) GROWTH_OF_MEMBER_BEFORE_FIVE_YEARS,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN YEAR(TO_DATE("dyInfo"."RDRQ"))=YEAR(NOW())-4 THEN 1 END) GROWTH_OF_MEMBER_BEFORE_FOUR_YEARS,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN YEAR(TO_DATE("dyInfo"."RDRQ"))=YEAR(NOW())-3 THEN 1 END) GROWTH_OF_MEMBER_BEFORE_THREE_YEARS,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN YEAR(TO_DATE("dyInfo"."RDRQ"))=YEAR(NOW())-2 THEN 1 END) GROWTH_OF_MEMBER_BEFORE_TWO_YEARS,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN YEAR(TO_DATE("dyInfo"."RDRQ"))=YEAR(NOW())-1 THEN 1 END) GROWTH_OF_MEMBER_BEFORE_ONE_YEAR&ndash;&gt;-->
+<!--&lt;!&ndash;        FROM "dy_gz_202002_18"&ndash;&gt;-->
+<!--&lt;!&ndash;        WHERE "dyInfo"."ZFBZ" = '0'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."GZGW_DM" IS NOT NULL&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYZT_DM" = '1000000003'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYLB_DM" IN ('1000000001','2000000002')&ndash;&gt;-->
+<!--&lt;!&ndash;        GROUP BY "dyInfo"."TREECODEPATH"&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <update id="saveDyZzlYtj">&ndash;&gt;-->
+<!--&lt;!&ndash;        UPSERT INTO "DY_ZZL_YTJ"(&ndash;&gt;-->
+<!--&lt;!&ndash;            "TREE_CODE_PATH",&ndash;&gt;-->
+<!--&lt;!&ndash;            "GROWTH_OF_MEMBER_BEFORE_FIVE_YEARS",&ndash;&gt;-->
+<!--&lt;!&ndash;            "GROWTH_OF_MEMBER_BEFORE_FOUR_YEARS",&ndash;&gt;-->
+<!--&lt;!&ndash;            "GROWTH_OF_MEMBER_BEFORE_THREE_YEARS",&ndash;&gt;-->
+<!--&lt;!&ndash;            "GROWTH_OF_MEMBER_BEFORE_TWO_YEARS",&ndash;&gt;-->
+<!--&lt;!&ndash;            "GROWTH_OF_MEMBER_BEFORE_ONE_YEAR"&ndash;&gt;-->
+<!--&lt;!&ndash;        ) VALUES(&ndash;&gt;-->
+<!--&lt;!&ndash;            '${treeCodePath}',&ndash;&gt;-->
+<!--&lt;!&ndash;            ${growthOfPartyMemberBeforeFiveYears},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${growthOfPartyMemberBeforeFourYears},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${growthOfPartyMemberBeforeThreeYears},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${growthOfPartyMemberBeforeTwoYears},&ndash;&gt;-->
+<!--&lt;!&ndash;            ${growthOfPartyMemberBeforeOneYear}&ndash;&gt;-->
+<!--&lt;!&ndash;        )&ndash;&gt;-->
+<!--&lt;!&ndash;    </update>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <select id="queryDyZzl" resultMap="zzl">&ndash;&gt;-->
+<!--&lt;!&ndash;            SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;                #{treeCodePath} TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("GROWTH_OF_MEMBER_BEFORE_FIVE_YEARS") GROWTH_OF_MEMBER_BEFORE_FIVE_YEARS,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("GROWTH_OF_MEMBER_BEFORE_FOUR_YEARS") GROWTH_OF_MEMBER_BEFORE_FOUR_YEARS,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("GROWTH_OF_MEMBER_BEFORE_THREE_YEARS") GROWTH_OF_MEMBER_BEFORE_THREE_YEARS,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("GROWTH_OF_MEMBER_BEFORE_TWO_YEARS") GROWTH_OF_MEMBER_BEFORE_TWO_YEARS,&ndash;&gt;-->
+<!--&lt;!&ndash;                SUM("GROWTH_OF_MEMBER_BEFORE_ONE_YEAR") GROWTH_OF_MEMBER_BEFORE_ONE_YEAR&ndash;&gt;-->
+<!--&lt;!&ndash;            FROM "DY_ZZL_YTJ"&ndash;&gt;-->
+<!--&lt;!&ndash;            WHERE TREE_CODE_PATH LIKE #{treeCodePath}&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;党员工作岗位&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <select id="dyGzgwYtj" resultMap="gzgw">&ndash;&gt;-->
+<!--&lt;!&ndash;        SELECT&ndash;&gt;-->
+<!--&lt;!&ndash;            "dyInfo"."TREECODEPATH" TREE_CODE_PATH,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."GZGW_DM",0,1)='1' THEN 1 END) STAFF,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."GZGW_DM",0,1)='2' THEN 1 END) NMYM,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."GZGW_DM",0,1)='3' THEN 1 END) PLA_AND_ARMED_POLICE,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."GZGW_DM",0,1)='4' THEN 1 END) STUDENT,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."GZGW_DM",0,1)='5' THEN 1 END) RETIRED_PERSONNEL,&ndash;&gt;-->
+<!--&lt;!&ndash;            COUNT(CASE WHEN SUBSTR("dyInfo"."GZGW_DM",0,1)='6' THEN 1 END) OTHER_PERSONNEL&ndash;&gt;-->
+<!--&lt;!&ndash;        FROM "dy_gz_202002_18"&ndash;&gt;-->
+<!--&lt;!&ndash;        WHERE "dyInfo"."ZFBZ" = '0'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."GZGW_DM" IS NOT NULL&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYZT_DM" = '1000000003'&ndash;&gt;-->
+<!--&lt;!&ndash;                AND "dyInfo"."DYLB_DM" IN ('1000000001','2000000002')&ndash;&gt;-->
+<!--&lt;!&ndash;        GROUP BY "dyInfo"."TREECODEPATH"&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+
+<!--    <update id="saveDyGzgwYtj">-->
+<!--        UPSERT INTO "DY_GZGW_YTJ"(-->
+<!--            "TREE_CODE_PATH",-->
+<!--            "STAFF",-->
+<!--            "NMYM",-->
+<!--            "PLA_AND_ARMED_POLICE",-->
+<!--            "STUDENT",-->
+<!--            "RETIRED_PERSONNEL",-->
+<!--            "OTHER_PERSONNEL"-->
+<!--        ) VALUES(-->
+<!--            '${treeCodePath}',-->
+<!--            ${staff},-->
+<!--            ${nmym},-->
+<!--            ${plaAndArmedPolice},-->
+<!--            ${student},-->
+<!--            ${retiredPersonnel},-->
+<!--            ${otherPersonnel}-->
+<!--        )-->
+<!--    </update>-->
+
+<!--    <select id="queryDyGzgw" resultMap="gzgw">-->
+<!--            SELECT-->
+<!--                #{treeCodePath} TREE_CODE_PATH,-->
+<!--                SUM("STAFF") STAFF,-->
+<!--                SUM("NMYM") NMYM,-->
+<!--                SUM("PLA_AND_ARMED_POLICE") PLA_AND_ARMED_POLICE,-->
+<!--                SUM("STUDENT") STUDENT,-->
+<!--                SUM("RETIRED_PERSONNEL") RETIRED_PERSONNEL,-->
+<!--                SUM("OTHER_PERSONNEL") OTHER_PERSONNEL-->
+<!--            FROM "DY_GZGW_YTJ"-->
+<!--            WHERE TREE_CODE_PATH LIKE #{treeCodePath}-->
+<!--    </select>-->
+
+<!--&lt;!&ndash;党员年龄&ndash;&gt;-->
+<!--    <select id="dyNlYtj" resultMap="nl">-->
+<!--        SELECT-->
+<!--            "dyInfo"."TREECODEPATH" TREE_CODE_PATH,-->
+<!--            COUNT(CASE WHEN (YEAR(NOW())-YEAR(TO_DATE("dyInfo"."CSRQ"))) &lt;= 35 THEN 1 END) AGE_UP_TO_THIRTYFIVE,-->
+<!--            COUNT(CASE WHEN (YEAR(NOW())-YEAR(TO_DATE("dyInfo"."CSRQ"))) &gt;= 36 AND (YEAR(NOW())-YEAR(TO_DATE("dyInfo"."CSRQ"))) &lt;= 45 THEN 1 END) AGE_FROM_THIRTYSIX_TO_FORTYFIVE,-->
+<!--            COUNT(CASE WHEN (YEAR(NOW())-YEAR(TO_DATE("dyInfo"."CSRQ"))) &gt;= 46 AND (YEAR(NOW())-YEAR(TO_DATE("dyInfo"."CSRQ"))) &lt;= 55 THEN 1 END) AGE_FROM_FORTYSIX_TO_FIFTYFIVE,-->
+<!--            COUNT(CASE WHEN (YEAR(NOW())-YEAR(TO_DATE("dyInfo"."CSRQ"))) &gt;= 56 AND (YEAR(NOW())-YEAR(TO_DATE("dyInfo"."CSRQ"))) &lt;= 60 THEN 1 END) AGE_FROM_FIFTYSIX_TO_SIXTY,-->
+<!--            COUNT(CASE WHEN (YEAR(NOW())-YEAR(TO_DATE("dyInfo"."CSRQ"))) &gt; 60 THEN 1 END) AGE_GREATER_THAN_SIXTY-->
+<!--        FROM "dy_gz_202002_18"-->
+<!--        WHERE "dyInfo"."ZFBZ" = '0'-->
+<!--                AND "dyInfo"."GZGW_DM" IS NOT NULL-->
+<!--                AND "dyInfo"."DYZT_DM" = '1000000003'-->
+<!--                AND "dyInfo"."DYLB_DM" IN ('1000000001','2000000002')-->
+<!--        GROUP BY "dyInfo"."TREECODEPATH"-->
+
+<!--    </select>-->
+
+<!--    <update id="saveDyNlYtj">-->
+<!--        UPSERT INTO "DY_NL_YTJ"(-->
+<!--            "TREE_CODE_PATH",-->
+<!--            "AGE_UP_TO_THIRTYFIVE",-->
+<!--            "AGE_FROM_THIRTYSIX_TO_FORTYFIVE",-->
+<!--            "AGE_FROM_FORTYSIX_TO_FIFTYFIVE",-->
+<!--            "AGE_FROM_FIFTYSIX_TO_SIXTY",-->
+<!--            "AGE_GREATER_THAN_SIXTY"-->
+<!--        ) VALUES(-->
+<!--            '${treeCodePath}',-->
+<!--            ${ageUpToThirtyfive},-->
+<!--            ${ageFromThirtysixToFortyfive},-->
+<!--            ${ageFromFortysixToFiftyfive},-->
+<!--            ${ageFromFiftysixToSixty},-->
+<!--            ${ageGreaterThanSixty}-->
+<!--        )-->
+<!--    </update>-->
+
+<!--    <select id="queryDyNl" resultMap="nl">-->
+<!--            SELECT-->
+<!--                #{treeCodePath} TREE_CODE_PATH,-->
+<!--                SUM("AGE_UP_TO_THIRTYFIVE") AGE_UP_TO_THIRTYFIVE,-->
+<!--                SUM("AGE_FROM_THIRTYSIX_TO_FORTYFIVE") AGE_FROM_THIRTYSIX_TO_FORTYFIVE,-->
+<!--                SUM("AGE_FROM_FORTYSIX_TO_FIFTYFIVE") AGE_FROM_FORTYSIX_TO_FIFTYFIVE,-->
+<!--                SUM("AGE_FROM_FIFTYSIX_TO_SIXTY") AGE_FROM_FIFTYSIX_TO_SIXTY,-->
+<!--                SUM("AGE_GREATER_THAN_SIXTY") AGE_GREATER_THAN_SIXTY-->
+
+<!--            FROM "DY_NL_YTJ"-->
+<!--            WHERE TREE_CODE_PATH LIKE #{treeCodePath}-->
+<!--    </select>-->
+
+<!--&lt;!&ndash;党员入党日期&ndash;&gt;-->
+<!--    <select id="dyRdrqYtj" resultMap="rdrq">-->
+<!--        SELECT-->
+<!--            "dyInfo"."TREECODEPATH" TREE_CODE_PATH,-->
+<!--            COUNT(CASE WHEN TO_TIMESTAMP("dyInfo"."RDRQ") &lt;= TO_TIMESTAMP('1945-09-02') THEN 1 END) JOIN_BEFORE_19450902,-->
+<!--            COUNT(CASE WHEN (TO_TIMESTAMP("dyInfo"."RDRQ") &gt;= TO_TIMESTAMP('1945-09-03') AND TO_TIMESTAMP("dyInfo"."RDRQ") &lt;= TO_TIMESTAMP('1949-09-30')) THEN 1 END) JOIN_FROM_19450903_TO_19490930,-->
+<!--            COUNT(CASE WHEN (TO_TIMESTAMP("dyInfo"."RDRQ") &gt;= TO_TIMESTAMP('1949-10-01') AND TO_TIMESTAMP("dyInfo"."RDRQ") &lt;= TO_TIMESTAMP('1966-04-30')) THEN 1 END) JOIN_FROM_19491001_TO_19660430,-->
+<!--            COUNT(CASE WHEN (TO_TIMESTAMP("dyInfo"."RDRQ") &gt;= TO_TIMESTAMP('1966-05-01') AND TO_TIMESTAMP("dyInfo"."RDRQ") &lt;= TO_TIMESTAMP('1976-10-31')) THEN 1 END) JOIN_FROM_19660501_TO_19761031,-->
+<!--            COUNT(CASE WHEN (TO_TIMESTAMP("dyInfo"."RDRQ") &gt;= TO_TIMESTAMP('1976-11-01') AND TO_TIMESTAMP("dyInfo"."RDRQ") &lt;= TO_TIMESTAMP('1978-12-31')) THEN 1 END) JOIN_FROM_19761101_TO_19781231,-->
+<!--            COUNT(CASE WHEN (TO_TIMESTAMP("dyInfo"."RDRQ") &gt;= TO_TIMESTAMP('1979-01-01') AND TO_TIMESTAMP("dyInfo"."RDRQ") &lt;= TO_TIMESTAMP('2012-10-31')) THEN 1 END) JOIN_FROM_19790101_TO_20121031,-->
+<!--            COUNT(CASE WHEN TO_TIMESTAMP("dyInfo"."RDRQ") &gt;= TO_TIMESTAMP('2012-11-01') THEN 1 END) JOIN_AFTER_20121101-->
+<!--        FROM "dy_gz_202002_18"-->
+<!--        WHERE "dyInfo"."ZFBZ" = '0'-->
+<!--                AND "dyInfo"."GZGW_DM" IS NOT NULL-->
+<!--                AND "dyInfo"."DYZT_DM" = '1000000003'-->
+<!--                AND "dyInfo"."DYLB_DM" IN ('1000000001','2000000002')-->
+<!--        GROUP BY "dyInfo"."TREECODEPATH"-->
+
+<!--    </select>-->
+
+<!--    <update id="saveDyRdrqYtj">-->
+<!--        UPSERT INTO "DY_RDRQ_YTJ"(-->
+<!--            "TREE_CODE_PATH",-->
+<!--            "JOIN_BEFORE_19450902",-->
+<!--            "JOIN_FROM_19450903_TO_19490930",-->
+<!--            "JOIN_FROM_19491001_TO_19660430",-->
+<!--            "JOIN_FROM_19660501_TO_19761031",-->
+<!--            "JOIN_FROM_19761101_TO_19781231",-->
+<!--            "JOIN_FROM_19790101_TO_20121031",-->
+<!--            "JOIN_AFTER_20121101"-->
+<!--        ) VALUES(-->
+<!--            '${treeCodePath}',-->
+<!--            ${joinBefore19450902},-->
+<!--            ${joinFrom19450903To19490930},-->
+<!--            ${joinFrom19491001To19660430},-->
+<!--            ${joinFrom19660501To19761031},-->
+<!--            ${joinFrom19761101To19781231},-->
+<!--            ${joinFrom19790101To20121031},-->
+<!--            ${joinAfter20121101}-->
+<!--        )-->
+<!--    </update>-->
+
+<!--    <select id="queryDyRdrq" resultMap="rdrq">-->
+<!--            SELECT-->
+<!--                #{treeCodePath} TREE_CODE_PATH,-->
+<!--                SUM("JOIN_BEFORE_19450902") JOIN_BEFORE_19450902,-->
+<!--                SUM("JOIN_FROM_19450903_TO_19490930") JOIN_FROM_19450903_TO_19490930,-->
+<!--                SUM("JOIN_FROM_19491001_TO_19660430") JOIN_FROM_19491001_TO_19660430,-->
+<!--                SUM("JOIN_FROM_19660501_TO_19761031") JOIN_FROM_19660501_TO_19761031,-->
+<!--                SUM("JOIN_FROM_19761101_TO_19781231") JOIN_FROM_19761101_TO_19781231,-->
+<!--                SUM("JOIN_FROM_19790101_TO_20121031") JOIN_FROM_19790101_TO_20121031,-->
+<!--                SUM("JOIN_AFTER_20121101") JOIN_AFTER_20121101-->
+<!--            FROM "DY_RDRQ_YTJ"-->
+<!--            WHERE TREE_CODE_PATH LIKE #{treeCodePath}-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash;党员死亡年龄&ndash;&gt;-->
+<!--    <select id="dySwnlYtj" resultMap="swnl">-->
+<!--        SELECT-->
+<!--            DY."dyInfo"."TREECODEPATH" TREE_CODE_PATH,-->
+<!--            #{id} DWXZLB_DM,-->
+<!--            COUNT(CASE WHEN (SUBSTR(DY."dyInfo"."DYZT_DM",0,1)='2') AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &lt; 18) THEN 1 END) DEATH_BEFORE_EIGHTEEN,-->
+<!--            COUNT(CASE WHEN (SUBSTR(DY."dyInfo"."DYZT_DM",0,1)='2') AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &gt;= 19) AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &lt;= 35) THEN 1 END) DEATH_FROM_NINETEEN_TO_THIRTYFIVE,-->
+<!--            COUNT(CASE WHEN (SUBSTR(DY."dyInfo"."DYZT_DM",0,1)='2') AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &gt;= 36) AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &lt;= 45) THEN 1 END) DEATH_FROM_THIRTYSIX_TO_FORTYFIVE,-->
+<!--            COUNT(CASE WHEN (SUBSTR(DY."dyInfo"."DYZT_DM",0,1)='2') AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &gt;= 46) AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &lt;= 55) THEN 1 END) DEATH_FROM_FORTYSIX_TO_FIFTYFIVE,-->
+<!--            COUNT(CASE WHEN (SUBSTR(DY."dyInfo"."DYZT_DM",0,1)='2') AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &gt;= 56) AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &lt;= 60) THEN 1 END) DEATH_FROM_FIFTYSIX_TO_SIXTY,-->
+<!--            COUNT(CASE WHEN (SUBSTR(DY."dyInfo"."DYZT_DM",0,1)='2') AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &gt;= 61) AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &lt;= 65) THEN 1 END) DEATH_FROM_SIXTYONE_TO_SIXTYFIVE,-->
+<!--            COUNT(CASE WHEN (SUBSTR(DY."dyInfo"."DYZT_DM",0,1)='2') AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &gt;= 66) AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &lt;= 70) THEN 1 END) DEATH_FROM_SIXTYSIX_TO_SEVENTY,-->
+<!--            COUNT(CASE WHEN (SUBSTR(DY."dyInfo"."DYZT_DM",0,1)='2') AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &gt;= 71) AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &lt;= 75) THEN 1 END) DEATH_FROM_SEVENTYONE_TO_SEVENTYFIVE,-->
+<!--            COUNT(CASE WHEN (SUBSTR(DY."dyInfo"."DYZT_DM",0,1)='2') AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &gt;= 76) AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &lt;= 80) THEN 1 END) DEATH_FROM_SEVENTYSIX_TO_EIGHTY,-->
+<!--            COUNT(CASE WHEN (SUBSTR(DY."dyInfo"."DYZT_DM",0,1)='2') AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &gt;= 81) AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &lt;= 85) THEN 1 END) DEATH_FROM_EIGHTYONE_TO_EIGHTYFIVE,-->
+<!--            COUNT(CASE WHEN (SUBSTR(DY."dyInfo"."DYZT_DM",0,1)='2') AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &gt;= 86) AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &lt;= 90) THEN 1 END) DEATH_FROM_EIGHTSIX_TO_NINETY,-->
+<!--            COUNT(CASE WHEN (SUBSTR(DY."dyInfo"."DYZT_DM",0,1)='2') AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &gt;= 91) AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &lt;= 95) THEN 1 END) DEATH_FROM_NINETYONE_TO_NINETYFIVE,-->
+<!--            COUNT(CASE WHEN (SUBSTR(DY."dyInfo"."DYZT_DM",0,1)='2') AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &gt;= 96) AND (YEAR(TO_DATE(DJ."djInfo"."LKBZBRQ"))-YEAR(TO_DATE(DY."dyInfo"."CSRQ")) &lt;= 100) THEN 1 END) DEATH_FROM_NINETYSIX_TO_ONEHUNDRED-->
+<!--        FROM "dy_gz_202002_18" AS DY-->
+<!--            LEFT JOIN "DY_DJXX" AS DJ ON DY."ROW" = DJ."djInfo"."DY_ID"-->
+<!--            LEFT JOIN "dzz_gz_202002" AS DZZ ON DY."dyInfo"."ORG_ID" = DZZ."ROW"-->
+<!--        WHERE SUBSTR(DZZ."dzzInfo"."DWXZLB_DM",0,1)=#{id}-->
+<!--        GROUP BY DY."dyInfo"."TREECODEPATH"-->
+
+<!--    </select>-->
+
+<!--    <update id="saveDySwnlYtj">-->
+<!--        UPSERT INTO "DY_SWNL_YTJ"(-->
+<!--            "UUID",-->
+<!--            "TREE_CODE_PATH",-->
+<!--            "DWXZLB_DM",-->
+<!--            "DEATH_BEFORE_EIGHTEEN",-->
+<!--            "DEATH_FROM_NINETEEN_TO_THIRTYFIVE",-->
+<!--            "DEATH_FROM_THIRTYSIX_TO_FORTYFIVE",-->
+<!--            "DEATH_FROM_FORTYSIX_TO_FIFTYFIVE",-->
+<!--            "DEATH_FROM_FIFTYSIX_TO_SIXTY",-->
+<!--            "DEATH_FROM_SIXTYONE_TO_SIXTYFIVE",-->
+<!--            "DEATH_FROM_SIXTYSIX_TO_SEVENTY",-->
+<!--            "DEATH_FROM_SEVENTYONE_TO_SEVENTYFIVE",-->
+<!--            "DEATH_FROM_SEVENTYSIX_TO_EIGHTY",-->
+<!--            "DEATH_FROM_EIGHTYONE_TO_EIGHTYFIVE",-->
+<!--            "DEATH_FROM_EIGHTSIX_TO_NINETY",-->
+<!--            "DEATH_FROM_NINETYONE_TO_NINETYFIVE",-->
+<!--            "DEATH_FROM_NINETYSIX_TO_ONEHUNDRED"-->
+<!--        ) VALUES(-->
+<!--            '${uuid}',-->
+<!--            '${treeCodePath}',-->
+<!--            '${dwxzlbDm}',-->
+<!--            ${deathBeforeEighteen},-->
+<!--            ${deathFromNineteenToThirtyfive},-->
+<!--            ${deathFromThirtysixToFortyfive},-->
+<!--            ${deathFromFortysixToFiftyfive},-->
+<!--            ${deathFromFiftysixToSixty},-->
+<!--            ${deathFromSixtyoneToSixtyfive},-->
+<!--            ${deathFromSixtysixToSeventy},-->
+<!--            ${deathFromSeventyoneToSeventyfive},-->
+<!--            ${deathFromSeventysixToEighty},-->
+<!--            ${deathFromEightyoneToEightyfive},-->
+<!--            ${deathFromEightysixToNinety},-->
+<!--            ${deathFromNinetyoneToNinetyfive},-->
+<!--            ${deathFromNinetysixToOneHundred}-->
+<!--        )-->
+<!--    </update>-->
+
+<!--    <select id="queryDySwnl" resultMap="swnl">-->
+<!--            SELECT-->
+<!--                #{treeCodePath} TREE_CODE_PATH,-->
+<!--                #{dwxzlbDm} DWXZLB_DM,-->
+<!--                SUM("DEATH_BEFORE_EIGHTEEN") DEATH_BEFORE_EIGHTEEN,-->
+<!--                SUM("DEATH_FROM_NINETEEN_TO_THIRTYFIVE") DEATH_FROM_NINETEEN_TO_THIRTYFIVE,-->
+<!--                SUM("DEATH_FROM_THIRTYSIX_TO_FORTYFIVE") DEATH_FROM_THIRTYSIX_TO_FORTYFIVE,-->
+<!--                SUM("DEATH_FROM_FORTYSIX_TO_FIFTYFIVE") DEATH_FROM_FORTYSIX_TO_FIFTYFIVE,-->
+<!--                SUM("DEATH_FROM_FIFTYSIX_TO_SIXTY") DEATH_FROM_FIFTYSIX_TO_SIXTY,-->
+<!--                SUM("DEATH_FROM_SIXTYONE_TO_SIXTYFIVE") DEATH_FROM_SIXTYONE_TO_SIXTYFIVE,-->
+<!--                SUM("DEATH_FROM_SIXTYSIX_TO_SEVENTY") DEATH_FROM_SIXTYSIX_TO_SEVENTY,-->
+<!--                SUM("DEATH_FROM_SEVENTYONE_TO_SEVENTYFIVE") DEATH_FROM_SEVENTYONE_TO_SEVENTYFIVE,-->
+<!--                SUM("DEATH_FROM_SEVENTYSIX_TO_EIGHTY") DEATH_FROM_SEVENTYSIX_TO_EIGHTY,-->
+<!--                SUM("DEATH_FROM_EIGHTYONE_TO_EIGHTYFIVE") DEATH_FROM_EIGHTYONE_TO_EIGHTYFIVE,-->
+<!--                SUM("DEATH_FROM_EIGHTSIX_TO_NINETY") DEATH_FROM_EIGHTSIX_TO_NINETY,-->
+<!--                SUM("DEATH_FROM_NINETYONE_TO_NINETYFIVE") DEATH_FROM_NINETYONE_TO_NINETYFIVE,-->
+<!--                SUM("DEATH_FROM_NINETYSIX_TO_ONEHUNDRED") DEATH_FROM_NINETYSIX_TO_ONEHUNDRED-->
+<!--            FROM "DY_SWNL_YTJ"-->
+<!--            WHERE TREE_CODE_PATH LIKE #{treeCodePath}-->
+<!--        <if test="dwxzlbDm!='0'.toString()" >-->
+<!--                AND DWXZLB_DM = #{dwxzlbDm}-->
+<!--        </if>-->
+<!--    </select>-->
+
+<!--&lt;!&ndash;党员入党年龄&ndash;&gt;-->
+<!--    <select id="dyRdnlYtj" resultMap="rdnl">-->
+<!--        SELECT-->
+<!--            "dyInfo"."TREECODEPATH" TREE_CODE_PATH,-->
+<!--            #{id} XL_DM,-->
+<!--            COUNT(CASE WHEN (YEAR(TO_DATE("dyInfo"."RDRQ"))-YEAR(TO_DATE("dyInfo"."CSRQ"))) &lt;= 17 THEN 1 END) JOIN_BEFORE_SEVENTEEN,-->
+<!--            COUNT(CASE WHEN (YEAR(TO_DATE("dyInfo"."RDRQ"))-YEAR(TO_DATE("dyInfo"."CSRQ"))) = 18 THEN 1 END) JOIN_AT_EIGHTEEN,-->
+<!--            COUNT(CASE WHEN (YEAR(TO_DATE("dyInfo"."RDRQ"))-YEAR(TO_DATE("dyInfo"."CSRQ"))) = 19 THEN 1 END) JOIN_AT_NINETEEN,-->
+<!--            COUNT(CASE WHEN (((YEAR(TO_DATE("dyInfo"."RDRQ")))-YEAR(TO_DATE("dyInfo"."CSRQ"))) &gt;= 20 AND (YEAR(TO_DATE("dyInfo"."RDRQ"))-YEAR(TO_DATE("dyInfo"."CSRQ"))) &lt;= 28) THEN 1 END) JOIN_FROM_TWENTY_TO_TWENTYEIGHT,-->
+<!--            COUNT(CASE WHEN (((YEAR(TO_DATE("dyInfo"."RDRQ")))-YEAR(TO_DATE("dyInfo"."CSRQ"))) &gt;= 29 AND (YEAR(TO_DATE("dyInfo"."RDRQ"))-YEAR(TO_DATE("dyInfo"."CSRQ"))) &lt;= 35) THEN 1 END) JOIN_FROM_TWENTYNINE_TO_THIRTYFIVE,-->
+<!--            COUNT(CASE WHEN (((YEAR(TO_DATE("dyInfo"."RDRQ")))-YEAR(TO_DATE("dyInfo"."CSRQ"))) &gt;= 36 AND (YEAR(TO_DATE("dyInfo"."RDRQ"))-YEAR(TO_DATE("dyInfo"."CSRQ"))) &lt;= 45) THEN 1 END) JOIN_FROM_THIRTYSIX_TO_FORTYFIVE,-->
+<!--            COUNT(CASE WHEN (((YEAR(TO_DATE("dyInfo"."RDRQ")))-YEAR(TO_DATE("dyInfo"."CSRQ"))) &gt;= 46 AND (YEAR(TO_DATE("dyInfo"."RDRQ"))-YEAR(TO_DATE("dyInfo"."CSRQ"))) &lt;= 60) THEN 1 END) JOIN_FROM_FORTYSIX_TO_SIXTY,-->
+<!--            COUNT(CASE WHEN (((YEAR(TO_DATE("dyInfo"."RDRQ")))-YEAR(TO_DATE("dyInfo"."CSRQ"))) &gt;= 61 AND (YEAR(TO_DATE("dyInfo"."RDRQ"))-YEAR(TO_DATE("dyInfo"."CSRQ"))) &lt;= 70) THEN 1 END) JOIN_FROM_SIXTYONE_TO_SEVENTY,-->
+<!--            COUNT(CASE WHEN (YEAR(TO_DATE("dyInfo"."RDRQ"))-YEAR(TO_DATE("dyInfo"."CSRQ"))) &gt; 70 THEN 1 END) JOIN_AFTER_SEVENTY-->
+<!--        FROM "dy_gz_202002_18"-->
+<!--        WHERE "dyInfo"."ZFBZ" = '0'-->
+<!--                AND "dyInfo"."GZGW_DM" IS NOT NULL-->
+<!--                AND "dyInfo"."DYZT_DM" = '1000000003'-->
+<!--                AND "dyInfo"."DYLB_DM" IN ('1000000001','2000000002')-->
+<!--                AND SUBSTR("dyInfo"."XL_DM",0,1)=#{id}-->
+<!--        GROUP BY "dyInfo"."TREECODEPATH"-->
+<!--    </select>-->
+
+<!--    <update id="saveDyRdnlYtj">-->
+<!--        UPSERT INTO "DY_RDNL_YTJ"(-->
+<!--            "UUID",-->
+<!--            "TREE_CODE_PATH",-->
+<!--            "XL_DM",-->
+<!--            "JOIN_BEFORE_SEVENTEEN",-->
+<!--            "JOIN_AT_EIGHTEEN",-->
+<!--            "JOIN_AT_NINETEEN",-->
+<!--            "JOIN_FROM_TWENTY_TO_TWENTYEIGHT",-->
+<!--            "JOIN_FROM_TWENTYNINE_TO_THIRTYFIVE",-->
+<!--            "JOIN_FROM_THIRTYSIX_TO_FORTYFIVE",-->
+<!--            "JOIN_FROM_FORTYSIX_TO_SIXTY",-->
+<!--            "JOIN_FROM_SIXTYONE_TO_SEVENTY",-->
+<!--            "JOIN_AFTER_SEVENTY"-->
+<!--        ) VALUES(-->
+<!--            '${uuid}',-->
+<!--            '${treeCodePath}',-->
+<!--            '${xlDm}',-->
+<!--            ${joinBeforeSeventeen},-->
+<!--            ${joinAtEighteen},-->
+<!--            ${joinAtNineteen},-->
+<!--            ${joinFromTwentyToTwentyeight},-->
+<!--            ${joinFromTwentynineToThirtyfive},-->
+<!--            ${joinFromThirtySixToFortyfive},-->
+<!--            ${joinFromFortySixToSixty},-->
+<!--            ${joinFromSixtyOneToSeventy},-->
+<!--            ${joinAfterSeventy}-->
+<!--        )-->
+<!--    </update>-->
+
+<!--    <select id="queryDyRdnl" resultMap="rdnl">-->
+<!--            SELECT-->
+<!--                #{treeCodePath} TREE_CODE_PATH,-->
+<!--                #{xlDm} XL_DM,-->
+<!--                SUM("JOIN_BEFORE_SEVENTEEN") JOIN_BEFORE_SEVENTEEN,-->
+<!--                SUM("JOIN_AT_EIGHTEEN") JOIN_AT_EIGHTEEN,-->
+<!--                SUM("JOIN_AT_NINETEEN") JOIN_AT_NINETEEN,-->
+<!--                SUM("JOIN_FROM_TWENTY_TO_TWENTYEIGHT") JOIN_FROM_TWENTY_TO_TWENTYEIGHT,-->
+<!--                SUM("JOIN_FROM_TWENTYNINE_TO_THIRTYFIVE") JOIN_FROM_TWENTYNINE_TO_THIRTYFIVE,-->
+<!--                SUM("JOIN_FROM_THIRTYSIX_TO_FORTYFIVE") JOIN_FROM_THIRTYSIX_TO_FORTYFIVE,-->
+<!--                SUM("JOIN_FROM_FORTYSIX_TO_SIXTY") JOIN_FROM_FORTYSIX_TO_SIXTY,-->
+<!--                SUM("JOIN_FROM_SIXTYONE_TO_SEVENTY") JOIN_FROM_SIXTYONE_TO_SEVENTY,-->
+<!--                SUM("JOIN_AFTER_SEVENTY") JOIN_AFTER_SEVENTY-->
+<!--            FROM "DY_RDNL_YTJ"-->
+<!--            WHERE TREE_CODE_PATH LIKE #{treeCodePath}-->
+<!--        <if test="xlDm!='0'.toString()" >-->
+<!--                AND XL_DM = #{xlDm}-->
+<!--        </if>-->
+<!--    </select>-->
+
+    <update id="test">
+        UPSERT INTO "mlxtest"(
+            "ROW",
+            "c1",
+            "c2"
+        ) VALUES(
+            #{uuid},
+            'v',
+            'v'
+        )
+    </update>
+    <update id="createTableTest">
+        CREATE TABLE "${tableName}"(
+            "ROW" VARCHAR NOT NULL PRIMARY KEY,
+            "c1" VARCHAR,
+            "c2" VARCHAR
+        )
+    </update>
+
+</mapper>
