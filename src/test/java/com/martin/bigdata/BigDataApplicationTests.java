@@ -1,8 +1,7 @@
 package com.martin.bigdata;
 
 import com.martin.bigdata.config.PhoenixConfig;
-import com.martin.bigdata.service.TestService;
-import com.martin.bigdata.util.HBaseUtil;
+import com.martin.bigdata.util.HbaseUtil;
 import com.martin.bigdata.util.HdfsUtil;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.hbase.client.Connection;
@@ -42,7 +41,7 @@ public class BigDataApplicationTests {
     @Test
     public void createNamespaceTest() throws Exception {
         System.out.println(hbase.getConfiguration());
-        HBaseUtil.createNamespace(hbase, "ns3");
+        HbaseUtil.createNamespace(hbase, "ns3");
     }
 
     @Test

@@ -12,9 +12,9 @@ import java.io.IOException;
  * @author martin
  * @desc hbase api
  */
-public class HBaseUtil {
+public class HbaseUtil {
 
-    private static final Logger logger = LoggerFactory.getLogger(HBaseUtil.class);
+    private static final Logger logger = LoggerFactory.getLogger(HbaseUtil.class);
 
     /**
      * 创建命名空间
